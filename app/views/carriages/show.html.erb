@@ -1,0 +1,23 @@
+<h1>Вагон №<%= @carriage.number %></h1>
+
+<p>
+  Поезд: <%= @carriage.train.number %>
+</p>
+
+<p>
+  Верхних сидений: <%= @carriage.top_seats %>
+</p>
+
+<p>
+  Нижних сидений: <%= @carriage.bottom_seats %>
+</p>
+
+<p>
+  Врехних боковых сидений: <%= @carriage.side_top_seats %>
+</p>
+
+<p>
+  Нижних боковых сидений: <%= @carriage.side_bottom_seats %>
+</p>
+
+<%= link_to "Назад", @carriage.train %>
