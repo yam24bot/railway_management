@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Routes</h1>
+<h1>Маршруты</h1>
 
 <table>
   <thead>
@@ -14,9 +14,9 @@
   <% @routes.each do |route| %>
     <tr>
       <td><%= route.name %></td>
-      <td><%= link_to 'Show', route %></td>
-      <td><%= link_to 'Edit', edit_route_path(route) %></td>
-      <td><%= link_to 'Destroy', route, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Показать', route %></td>
+      <td><%= link_to 'Изменить', edit_route_path(route) %></td>
+      <td><%= link_to 'Удалить', route, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
     </tr>
   <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Railway station', new_route_path %>
+<%= link_to 'Новый маршрут', new_route_path %>
