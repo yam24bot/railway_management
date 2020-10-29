@@ -1,3 +1,15 @@
 <h1>Поиск билета</h1>
 
-<p><%= link_to "Купить билет", tickets_path, method: :post %></p>
+<div class="row">
+  <%= form_tag search_path, class: 'search_form' do %>
+    <div class="col-md-4">
+      <%= select_tag :start_station, options_from_collection_for_select(@stations, :id, :title), class: 'form-control' %>
+    </div>
+    <div class="col-md-4">
+      <%= select_tag :end_station, options_from_collection_for_select(@stations, :id, :title), class: 'form-control' %>
+    </div>
+    <div class="col-md-4">
+      <%= submit_tag "Найти", class: 'btn btn-primary find' %>
+    </div>
+  <% end %>
+</div>
